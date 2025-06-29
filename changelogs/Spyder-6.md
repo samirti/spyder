@@ -56,7 +56,8 @@
 * Add `get_server_name` method to get a server name given its id.
 * Add `register_api` and `get_api` methods in order to get and register new rest API modules for the remote client.
 * Add `get_jupyter_api` method to get the Jupyter API to interact with a remote Jupyter server.
-* Add `get_file_api` method to get the `SpyderRemoteFileServicesAPI` rest API module to manage remote file systems.
+* Add `get_file_api` method to get the rest API module to manage remote file systems.
+* Add `get_environ_api` method to get the rest API module to work with environment variables in the remote machine.
 
 #### Pythonpath manager
 
@@ -72,6 +73,11 @@
 * **Breaking** - `ExplorerTreeWidgetActions` renamed to `ExplorerWidgetActions`.
 * **Breaking** - The `sig_dir_opened` signal now emits two strings instead of a single one.
 * Add `server_id` kwarg to the `chdir` method.
+
+### Main menu
+
+* **Breaking** - Remove the `Cursor`, `Formatting` and `CodeAnalysis` sections from `SourceMenuSections`.
+* Add a `Formatting` section to `EditMenuSections`, `Cursor` to `SearchMenuSections` and `Autofix` to `SourceMenuSections`.
 
 #### SpyderPluginV2
 
