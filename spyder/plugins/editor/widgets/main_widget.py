@@ -1780,6 +1780,9 @@ class EditorMainWidget(PluginMainWidget):
 
         current_es.set_current_filename(finfo.filename)
 
+        if self.editorstacks[0].get_stack_count() == 1:
+            self.update_run_focus_file()
+
         if not created_from_here:
             self.save(force=True)
 
