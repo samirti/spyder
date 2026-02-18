@@ -1780,6 +1780,9 @@ class EditorMainWidget(PluginMainWidget):
 
         current_es.set_current_filename(finfo.filename)
 
+        # Prevent KeyError when closing all files and not giving focus to
+        # the untitled one that is created before running it.
+        # Fixes spyder-ide/spyder#23299
         if self.editorstacks[0].get_stack_count() == 1:
             self.update_run_focus_file()
 
